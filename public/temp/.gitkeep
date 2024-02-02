@@ -1,6 +1,8 @@
  #1 gitignore codegenerator
 
 -DevDependencies v/s Dependencies
--import .dotenv still required require syntax
+-import .dotenv still required require syntax   -> type-module
 -git does not store empty folders
 -about prettier - very useful for group project
+
+- db connection -> isntances and exit
