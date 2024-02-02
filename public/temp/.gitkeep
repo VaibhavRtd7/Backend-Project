@@ -1,1 +1,6 @@
-#1  - gitinore codegenerator
+ #1 gitignore codegenerator
+
+-DevDependencies v/s Dependencies
+-import .dotenv still required require syntax
+-git does not store empty folders
+-about prettier - very useful for group project
