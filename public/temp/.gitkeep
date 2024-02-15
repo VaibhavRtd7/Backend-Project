@@ -2,7 +2,11 @@
 
 -DevDependencies v/s Dependencies
 -import .dotenv still required require syntax   -> type-module
+    - how it works , 🤕 have to do changes in package.json
 -git does not store empty folders
 -about prettier - very useful for group project
 
 - db connection -> isntances and exit
+
+>> Custom api responses and error handling
+  Try-catch or Promise   - understand
