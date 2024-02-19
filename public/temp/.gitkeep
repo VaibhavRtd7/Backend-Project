@@ -28,3 +28,9 @@
        return true/false
     - jwt as a beard token
     - npmjs -> jwt checkout github
+
+// Learn about access tokens and secrect keys
+// learn about cloudinary and multer
+
+Read about multer
+https://github.com/expressjs/multer#readme
