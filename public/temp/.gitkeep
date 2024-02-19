@@ -10,3 +10,21 @@
 
 >> Custom api responses and error handling
   Try-catch or Promise   - understand
+  What is CORS_ORIGIN and why I write it in .env ? 🫢
+
+>> User and Video model with hooks and JWT
+    - index : true -> in model for ( for searching )
+     checkout mongoose website
+    - mongoose.aggregate
+    - bcrypt v/s bcryptjs
+    - jsonwebtoken
+
+    -hash the password using bcrypt
+    https://mongoosejs.com/docs/middleware.html
+    https://mongoosejs.com/docs/middleware.html#pre
+
+    -cutsom methods ( predefined methods like up)
+       used the compare method of bcrypt
+       return true/false
+    - jwt as a beard token
+    - npmjs -> jwt checkout github
