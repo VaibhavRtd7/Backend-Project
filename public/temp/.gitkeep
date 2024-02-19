@@ -34,3 +34,5 @@
 
 Read about multer
 https://github.com/expressjs/multer#readme
+
+>> .env file takes almost 3hr because of (;) 
