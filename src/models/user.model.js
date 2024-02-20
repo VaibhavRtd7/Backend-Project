@@ -51,7 +51,6 @@ const userSchema = new Schema({
     timestamps: true,
 })
 
-export const User = mongoose.model("User", userSchema);
 
 // bcrypt is used for both hash and checks the password
 userSchema.pre ( "save", async function (next) {
@@ -78,16 +77,18 @@ userSchema.methods.generateAccessToken = function(){
         {
             expiresIn: process.env.ACCESS_TOKEN_EXPIRY
         }
-    )
-}
-userSchema.methods.generateRefreshToken = function(){
-    return jwt.sign(
-        {
-            _id: this._id,
-        },
-        process.env.REFRESH_TOKEN_SECRET,
-        {
-            expiresIn: process.env.REFRESH_TOKEN_EXPIRY
+        )
+    }
+    userSchema.methods.generateRefreshToken = function(){
+        return jwt.sign(
+            {
+                _id: this._id,
+            },
+            process.env.REFRESH_TOKEN_SECRET,
+            {
+                expiresIn: process.env.REFRESH_TOKEN_EXPIRY
+            }
+            )
         }
-    )
-}
+
+export const User = mongoose.model("User", userSchema);
