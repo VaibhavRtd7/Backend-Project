@@ -1,0 +1,3 @@
+- See env file carefully
+  .env file takes almost 3hr because of (;) 
+- don't mess with await ( you know very well in  user-controller)

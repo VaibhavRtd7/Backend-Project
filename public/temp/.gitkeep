@@ -3,10 +3,9 @@
 -DevDependencies v/s Dependencies
 -import .dotenv still required require syntax   -> type-module
     - how it works , 🤕 have to do changes in package.json
--git does not store empty folders
--about prettier - very useful for group project
-
-- db connection -> isntances and exit
+  -git does not store empty folders
+  -about prettier - very useful for group project
+  - db connection -> isntances and exit
 
 >> Custom api responses and error handling
   Try-catch or Promise   - understand
@@ -29,10 +28,35 @@
     - jwt as a beard token
     - npmjs -> jwt checkout github
 
-// Learn about access tokens and secrect keys
-// learn about cloudinary and multer
+  // Learn about access tokens and secrect keys
+  // learn about cloudinary and multer
 
-Read about multer
-https://github.com/expressjs/multer#readme
+  Read about multer
+  https://github.com/expressjs/multer#readme
 
->> .env file takes almost 3hr because of (;) 
+-- .env file takes almost 3hr because of (;) 
+
+>> how to upload files in backend -> multer & cloudinary
+  -> using multer
+     - nulter.diskStorage -> {destination, filename} -> export const upload = multer({ storage: storage })
+     - In routes with middleware -> upload.fields([ {}, {}])
+  -> cloudinary
+     - cloudinary.uploader.upload(localFilePath)
+
+>> Router & controller for Register
+   -> new methods -> checkout the register controller
+
+>> Logic for register 
+  -> Steps
+
+>> Access RefreshToken , middleware and cookies
+  -> access v/s refresh token
+  -> access token
+   -short lived
+   -user validate by this
+
+  -> refresh token
+    -long lived
+    -present at both sides ( db and userside)
+
+  -> loginUser controller 
