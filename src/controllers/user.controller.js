@@ -435,6 +435,7 @@ const getUserChannelProfile = asyncHandler(async(req, res) => {
 
 })
 
+// get watch history - used the pipelines
 const getWatchHistory = asyncHandler ( async(req,res) => {
     
   const user = await User.aggregate([
@@ -501,5 +502,6 @@ export {
   changeCurrentPassword,
   updateUserAvatar,
   updateUserCoverImage,
-  getUserChannelProfile
+  getUserChannelProfile,
+  getWatchHistory
  };
