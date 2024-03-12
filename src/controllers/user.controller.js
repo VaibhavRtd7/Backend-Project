@@ -172,10 +172,11 @@ const loginUser = asyncHandler(async (req, res) => {
 
 //Logout User...
 const logOutUser = asyncHandler(async (req, res) => {
+  // console.log('logout hits')
   await User.findByIdAndUpdate(
     req.user._id,
     {
-      $set: {
+      $set: {                    // unset -> refreshToken : 1
         refreshToken: undefined,
       },
     },
@@ -253,8 +254,11 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
 // Change password
 const changeCurrentPassword = asyncHandler ( async(req, res) => {
     const { oldPassword, newPassword} = req.body;
-    const user = await User.findById(req.body?._id);
-    const isPasswordCorrect = await User.isPasswordCorrect(oldPassword);
+
+    const user = await User.findById(req.user?._id); // req.body
+    // console.log("-- oldPassword, newPassword :-----", oldPassword, newPassword);
+    const isPasswordCorrect = await user.isPasswordCorrect(oldPassword);
+    
 
     if(!isPasswordCorrect) {
       throw new ApiError(400, "Invalid old password");
@@ -277,6 +281,7 @@ const changeCurrentPassword = asyncHandler ( async(req, res) => {
 
 // get current user
 const getCurrentUser = asyncHandler ( async (req, res) => {
+    console.log(req.user)
     return res.status(200).json( new ApiResponse ( 200, req.user, "current user fetch"))
 })
 
