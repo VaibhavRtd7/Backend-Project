@@ -18,7 +18,7 @@ app.use(cors({
 
 
     // routes import 
-    import userRouter from "./routes/user.route.js"
+    import userRouter from "./routes/user.routes.js"
     
     // route declarations
     app.use('/api/v1/users', userRouter);
